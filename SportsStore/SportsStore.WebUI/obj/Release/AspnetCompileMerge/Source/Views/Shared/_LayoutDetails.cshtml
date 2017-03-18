@@ -1,0 +1,47 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - D7S-Accessories</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <style>     
+        .navbar-right {
+            float: right !important;
+        }
+        body {
+            background-color: #ffffff;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        @Html.Partial("_NavBarAbout")
+        @RenderBody()
+
+        <!--Footer-->
+        @Html.Partial("_FooterMain")
+        <br>
+        <hr />
+        <!--Second Footer-->
+        <footer class="container">
+            <div class="row">
+                <div class="panel-primary">
+                    <div class="panel-body text-right">
+                        <p>©2016 D7S-Accessories™. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+</body>
+</html>

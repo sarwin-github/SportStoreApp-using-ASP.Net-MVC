@@ -1,0 +1,44 @@
+﻿<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                D7S-Accessories
+            </a>
+        </div>
+    </div>
+    <div class="navbar navbar-inverse">
+        <div class="container">
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="@Url.Action("List", "Product")">Home</a></li>
+                    <li><a href="@Url.Action("About", "Details")">About</a></li>
+                    <li><a href="@Url.Action("Contact_Us", "Details")">Contact Us</a></li>
+                    <li><a href="@Url.Action("List", "Product")">FAQ</a></li>
+                </ul>
+                <ul class="nav navbar-nav pull-right hidden-xs">
+                    <li>
+                        @Html.Action("Summary", "Cart")
+                    </li>
+                </ul>
+            </div>
+            <ul class="nav navbar-nav pull-right col-xs-12 visible-xs">
+                <li>
+                    @Html.Action("Summary", "Cart")
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+

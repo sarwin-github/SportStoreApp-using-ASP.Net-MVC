@@ -1,0 +1,41 @@
+﻿@model SportsStore.Domain.Entities.Product
+
+<div class="well well-lg col-sm-4 bg-danger">
+    <div>
+        <div class="panel-primary">
+            <div class="panel-heading">
+                <span class="label label-danger pull-right">
+                    @Model.Price.ToString("c")
+                </span>
+                <span class="lead"><strong class="text-primary">@Model.Name</strong></span>
+            </div>
+            <div class="panel-body">
+                <p class="text-info"><small>@Model.Description</small></p>
+                <div class="panel-collapse">
+
+                    <div class="img-responsive">
+                        @if (Model.ImageData != null)
+                        {   <div style="margin-right: 10px">
+                            <img class="img-thumbnail" height="100" src="@Url.Action("GetImage", "Product", new { Model.ProductID })" />
+                        </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-footer">
+                @using (Html.BeginForm("AddToCart", "Cart"))
+                {
+                    <div class="text-right">
+                        @Html.HiddenFor(x => x.ProductID)
+                        @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                        <input type="submit" class="btn btn-primary" value="Add to Cart">
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

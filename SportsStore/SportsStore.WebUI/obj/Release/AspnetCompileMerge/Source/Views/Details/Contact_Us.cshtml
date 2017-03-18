@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_LayoutDetails.cshtml";
+}
+
+
+<div class="container">
+    <div class="panel">
+        <div class="well col-md-6">
+            <div class="alert"><h2>Contact Us</h2></div>
+
+            <div class="col-md-12">
+                <p class="col-md-4"><b>Office</b></p><p class="col-md-8">+200-256-7978</p>
+                <p class="col-md-4"><b>Mobile</b></p><p class="col-md-8">+639-0715-548-97</p>
+                <p class="col-md-4"><b>Email</b></p><p class="col-md-8">dapito.sherwin@yahoo.com</p>
+                <p class="col-md-4"><b>Address</b></p><p class="col-md-8"> Block 102 Juan Luna St.</p>
+                <p class="col-md-4"></p><p class="col-md-8">Quezon, Philippines</p>
+                <p> </p>
+                    <img src="~/Content/Content/contact-us.png" class="img-responsive hidden-xs" width="420" />
+
+                
+            </div>
+
+            
+        </div>
+        <div class="col-md-6 alert alert-danger">
+            <form class="form-horizontal">
+                <fieldset>
+                    <legend class="text-right text-danger">Contact Us form</legend>
+                    <div class="form-group">
+                        <label for="inputEmail" class="col-lg-3 control-label">Email</label>
+                        <div class="col-lg-9">
+                            <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail" class="col-lg-3 control-label">Full Name</label>
+                        <div class="col-lg-9">
+                            <input type="text" class="form-control" id="inputEmail" placeholder="Full Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail" class="col-lg-3 control-label">Phone Number</label>
+                        <div class="col-lg-9">
+                            <input type="text" class="form-control" id="inputEmail" placeholder="Phone">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="textArea" class="col-lg-3 control-label">Your Message</label>
+                        <div class="col-lg-9">
+                            <textarea class="form-control" rows="3" id="textArea"></textarea>
+                            <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+                        </div>
+                    </div>
+                    <div class="hidden-xs"><br><br><br></div>
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2 text-right">
+                            <button type="reset" class="btn btn-default">Clear</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+
+
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+

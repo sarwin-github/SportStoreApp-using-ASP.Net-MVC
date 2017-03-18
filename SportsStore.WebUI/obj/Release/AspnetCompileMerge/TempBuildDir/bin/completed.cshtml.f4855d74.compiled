@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="2" virtualPath="/Views/Cart/Completed.cshtml" hash="1dc92fa5" filehash="30ef51deaa79" flags="110000" assembly="App_Web_db4jfddw" type="ASP._Page_Views_Cart_Completed_cshtml">
+    <filedeps>
+        <filedep name="/Views/Cart/Completed.cshtml" />
+    </filedeps>
+</preserve>

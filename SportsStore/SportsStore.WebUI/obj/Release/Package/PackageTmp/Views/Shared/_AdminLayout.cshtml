@@ -1,0 +1,60 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/scripts/bootstrap.min.js"></script>
+</head>
+    <body>
+        <div>
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="@Url.Action("List", "Product")">
+                        Sports Store
+                    </a>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        @{
+                            var userName = HttpContext.Current.User.Identity.Name;
+                            if (userName != "")
+                            {
+                                    <li>
+                                        @Html.ActionLink(userName + " - Logout", "Logout", "Account",
+                                        "", new { @class = "btn pull-right text-center",
+                                        style = "background-color:transparent;" })
+                                    </li>
+                            }
+                        }
+                    </ul>
+
+                </div>
+
+               
+
+            </nav>
+
+
+            @if (TempData["message"] != null)
+            {
+                <div class="alert alert-success alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    @TempData["message"]
+                </div>
+            }
+
+            <div class="container">
+                @RenderBody()
+            </div>
+        </div>
+    </body>
+
+</html>
+
+

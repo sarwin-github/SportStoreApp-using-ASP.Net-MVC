@@ -1,0 +1,65 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <title>@ViewBag.Title - D7S-Accessories</title>
+
+    <style>
+        .navbar-right {
+            float: right !important;
+        }
+
+        body {
+            background-color: #ffffff;
+        }
+    </style>
+
+    <script>
+        $('.navbar-lower').affix({
+            offset: { top: 50 }
+        });
+    </script>
+</head>
+<body>
+    <!--Navigation-->
+    @Html.Partial("_NavBarMain")
+    <div class="container">
+        <div class="panel">
+            <!--Carousel-->
+            @Html.Partial("_CarouselMain")
+            <div class="panel panel-body">
+                <!--List of products here-->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <!--Footer-->
+    @Html.Partial("_FooterMain")
+    <br>
+    <hr />
+    <!--Second Footer-->
+    <footer class="container">
+        <div class="row">
+            <div class="panel-primary">
+                <div class="panel-body text-right">
+                    <p>©2016 Powered by D7S-Accessories™. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

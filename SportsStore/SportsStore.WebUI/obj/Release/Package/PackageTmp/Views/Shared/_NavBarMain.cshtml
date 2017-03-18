@@ -1,0 +1,82 @@
+﻿<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                D7S-Accessories
+            </a>
+        </div>
+        <ul class="nav navbar-nav hidden-xs pull-right">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Category <span class="caret"></span></a>
+                @Html.Action("DropDownMenu", "Nav")
+            </li>
+            <li>
+                <div class="hidden-xs">
+                    @using (Html.BeginForm("Search", "Product", FormMethod.Get ,new { @class = "navbar-form form-inline navbar-left", role = "search" }))
+                            {
+                                <div class="form-group">
+                                    @Html.TextBox("search_Value", "", new { @class = "form-control", placeholder = "Search" })
+                                </div>
+                                <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-search"></span></button>
+                            }
+
+                </div>
+            </li>
+        </ul>
+
+
+
+    </div>
+    <div class="navbar navbar-inverse">
+        <div class="container">
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="@Url.Action("List", "Product")">Home</a></li>
+                    <li><a href="@Url.Action("About", "Details")">About</a></li>
+                    <li><a href="@Url.Action("Contact_Us", "Details")">Contact Us</a></li>
+                    <li><a href="@Url.Action("List", "Product")">FAQ</a></li>
+                    <li class="visible-xs container-fluid">
+                        <form class="navbar-form form-inline" role="search">
+                            <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <div class="text-right">
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </div>
+                         </form>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav pull-right hidden-xs">
+                    <li>
+                        @Html.Action("Summary", "Cart")
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="nav navbar-nav visible-xs col-xs-6">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Category <span class="caret"></span></a>
+                    @Html.Action("DropDownMenu", "Nav")
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav pull-right col-xs-6 visible-xs">
+                <li>
+                    @Html.Action("Summary", "Cart")
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+
+
+
